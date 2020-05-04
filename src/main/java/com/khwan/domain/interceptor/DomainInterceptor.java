@@ -12,11 +12,15 @@ public class DomainInterceptor  implements HandlerInterceptor {
 
 
     @Override
-    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
-        logger.debug("requestURI ======>   "+request.getRequestURI());
-        logger.debug("requestURL ======>   "+request.getRequestURL());
-        logger.debug("querySTring ======>   "+request.getQueryString());
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+        logger.info("==================     interceptor start     =========================");
+        logger.info("==  requestURI ======>   "+request.getRequestURI());
+        logger.info("==  requestURL ======>   "+request.getRequestURL());
+        logger.info("==  domain  ======>   "+request.getServerName()==null?"":request.getServerName());
+        logger.info("==  querySTring ======>   "+request.getQueryString());
+        logger.info("==================     interceptor end    =========================");
 
-        throw new RuntimeException("unauthorized");
+
+        return true;
     }
 }

@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/onetouch?serverTimezone=UTC
+    url: jdbc:mysql://sanchun.cvn2liswve6f.us-east-2.rds.amazonaws.com:3306/sanchun?serverTimezone=UTC
     username: root
-    password: 1234
+    password:
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:

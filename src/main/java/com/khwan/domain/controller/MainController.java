@@ -15,7 +15,7 @@ public class MainController {
 
     @RequestMapping(value = "/main", method = RequestMethod.GET)
     public String main(HttpServletRequest request, Model model){
-
+        model.addAttribute("message","hello");
         return "main";
     }
 }
